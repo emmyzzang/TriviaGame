@@ -38,7 +38,6 @@ var questions = [{
 
 
 //FUNCTIONS
-
 var game = {
 	correct: 0, 
 	incorrect: 0, 
@@ -136,26 +135,13 @@ var game = {
 	}, 
 	result: function() { 
 	clearInterval(timer); 
-	$('#subwrapper h2').remove();
-	$('#subwrapper').html("<h2>All done!</h2>"); 
+	$('#subwrapper h3').remove();
+	$('#subwrapper').html("<h3>All done!</h3>"); 
 	$('#subwrapper').append("<h3>Correct Answers: "+this.correct+"</h3>");
 	$('#subwrapper').append("<h3>Incorrect Answers: "+this.incorrect+"</h3>");
 	$('#subwrapper').append("<h3>Unanswered: "+(questions.length-(this.incorrect+this.correct))+"</h3>");
 	}
 }
-
-
-
-
-
-	// done: function(){
-	// 	$.each($('input'))
-	// }
-
-// function palindrome ("hi") {
-// 	return hi.split("").reverse("")join("") === str; 
-
-// }
 
 
 
